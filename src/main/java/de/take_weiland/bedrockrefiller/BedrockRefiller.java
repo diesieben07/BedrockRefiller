@@ -24,16 +24,15 @@ public class BedrockRefiller {
     static final String NAME = "BedrockRefiller";
     static final String VERSION = "1.0";
 
-    private static Configuration config;
     private static int[] dimensionIDs;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
 
-        config = new Configuration(event.getSuggestedConfigurationFile());
+        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
-        dimensionIDs = config.get(Configuration.CATEGORY_GENERAL, "dimensions", new int[] { 0 }, "Dimensions bedrock should be placed in").getIntList();
+        dimensionIDs = config.get(Configuration.CATEGORY_GENERAL, "dimensions", new int[]{0}, "Dimensions bedrock should be placed in").getIntList();
         if (config.hasChanged()) {
             config.save();
         }
@@ -68,8 +67,6 @@ public class BedrockRefiller {
         if (!Ints.contains(dimensionIDs, chunk.worldObj.provider.dimensionId)) {
             return;
         }
-
-        System.out.println("Doing chunk");
 
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
