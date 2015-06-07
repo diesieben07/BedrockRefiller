@@ -17,7 +17,10 @@ import java.util.Set;
 /**
  * @author diesieben07
  */
-@Mod(modid = BedrockRefiller.MOD_ID, name = BedrockRefiller.NAME, version = BedrockRefiller.VERSION)
+@Mod(modid = BedrockRefiller.MOD_ID,
+        name = BedrockRefiller.NAME,
+        version = BedrockRefiller.VERSION,
+        acceptableRemoteVersions = "*")
 public class BedrockRefiller {
 
     static final String MOD_ID = "bedrockrefiller";
