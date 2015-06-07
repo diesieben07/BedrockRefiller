@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bedrockrefiller",
+  "name": "Bedrock Refiller",
+  "description": "Refills the bottom of the overworld with bedrock.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["diesieben07"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
