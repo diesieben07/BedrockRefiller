@@ -69,6 +69,8 @@ public class BedrockRefiller {
             return;
         }
 
+        System.out.println("Doing chunk");
+
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
                 chunk.func_150807_a(x, 0, z, Blocks.bedrock, 0);
